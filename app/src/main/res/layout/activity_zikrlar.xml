@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Zikrlaractivity"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#245926">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/ib_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zikrlar_back_button"
+                    android:background="@drawable/zikrlar_backbutton"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+
+                    android:id="@+id/tv_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zikrlar sanog'i"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:paddingRight="20dp"/>
+
+                <ImageButton
+
+                    android:background="@drawable/click_circle"
+                    android:id="@+id/ib_volume"
+                    android:layout_width="40dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/volume_size"/>
+
+                <Button
+
+                    android:id="@+id/b_mode"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/click_circle"
+                    android:layout_marginRight="5dp"
+                    android:text="33"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:src="@drawable/click_status"
+                    app:backgroundTint="@null" />
+
+                <ImageButton
+
+                    android:background="@drawable/click_circle"
+                    android:id="@+id/ib_reset"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/reset_process"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@drawable/main_background_mosque_2">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="50dp">
+            <ImageView
+
+                android:id="@+id/iv_mosquepic"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:src="@drawable/pic_mosque"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/status_circle"
+                android:gravity="center">
+
+                <TextView
+
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 | 33"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|top"
+        android:background="@drawable/mainbackgroundmosque">
+
+        <Button
+
+            android:id="@+id/b_click"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/click_circle"
+            app:backgroundTint="@null"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="70sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
