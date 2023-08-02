@@ -2,32 +2,92 @@ package com.example.tasbeh
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class Zikrlaractivity: AppCompatActivity() {
+class Zikrlaractivity: AppCompatActivity(){
+    lateinit var ibVolume:ImageButton
+    lateinit var bMode:Button
+    lateinit var ibReset:ImageButton
+    lateinit var tvStatus:TextView
+    lateinit var bClick:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_zikrlar)
 
         navigation()
+        initViews()
 
     }
 
     fun initViews(){
 
-        val tvText=findViewById<TextView>(R.id.tv_text)
-        val ibVolume=findViewById<ImageButton>(R.id.ib_volume)
-        val bMode=findViewById<Button>(R.id.b_mode)
-        val ibReset=findViewById<ImageButton>(R.id.ib_reset)
-        val ivMosquePic=findViewById<ImageView>(R.id.iv_mosquepic)
-        val tvStatus=findViewById<TextView>(R.id.tv_status)
-        val bClick=findViewById<Button>(R.id.b_click)
         var count33=0
         var count99=0
+        var mode=33
+
+        ibVolume=findViewById(R.id.ib_volume)
+        bMode=findViewById(R.id.b_mode)
+        ibReset=findViewById(R.id.ib_reset)
+        tvStatus=findViewById(R.id.tv_status)
+        bClick=findViewById(R.id.b_click)
+
+        bClick.setOnClickListener {
+
+            if (mode==33){
+
+                count33++
+                bClick.text="$count33"
+                tvStatus.text="$count33/33"
+                if (count33==33){
+
+                    count33=0
+                    bClick.text="0"
+                    tvStatus.text="0/33"
+
+                }
+
+            }
+            if (mode==99){
+
+                count99++
+                bClick.text="$count99"
+                tvStatus.text="$count99/99"
+                if (count99==99){
+
+                    count99=0
+                    bClick.text="0"
+                    tvStatus.text="0/99"
+
+                }
+
+            }
+
+        }
+
+        ibReset.setOnClickListener {
+
+            count33=0
+            count99=0
+            mode=33
+            tvStatus.text="0/33"
+            bClick.text="0"
+
+        }
+
+        bMode.setOnClickListener {
+
+            mode=99
+            tvStatus.text="0/99"
+            bClick.text="0"
+
+
+        }
 
 
     }
@@ -44,5 +104,7 @@ class Zikrlaractivity: AppCompatActivity() {
         }
 
     }
+
+
 
 }
