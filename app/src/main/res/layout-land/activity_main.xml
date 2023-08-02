@@ -67,9 +67,9 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.6"
         android:background="@drawable/mainbackgroundmosque"
-        android:gravity="center|top"
+        android:gravity="center|bottom"
         android:paddingHorizontal="200dp">
 
         <Button
