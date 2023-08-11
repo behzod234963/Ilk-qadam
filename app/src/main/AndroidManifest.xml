@@ -21,7 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Zikrlaractivity">
+        <activity android:name=".ZikrlarActivity">
+        </activity>
+        <activity android:name=".NamozActivity">
+        </activity>
+        <activity android:name=".TahoratolishActivity">
         </activity>
     </application>
 
