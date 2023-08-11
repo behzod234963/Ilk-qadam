@@ -7,15 +7,17 @@ import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class Zikrlaractivity: AppCompatActivity(){
     lateinit var ibVolume:ImageButton
-    lateinit var bMode:Button
+    lateinit var tvMode:TextView
     lateinit var ibReset:ImageButton
     lateinit var tvStatus:TextView
     lateinit var bClick:Button
+    lateinit var llMode:LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_zikrlar)
@@ -32,10 +34,11 @@ class Zikrlaractivity: AppCompatActivity(){
         var mode=33
 
         ibVolume=findViewById(R.id.ib_volume)
-        bMode=findViewById(R.id.b_mode)
+        tvMode=findViewById(R.id.tv_Mode)
         ibReset=findViewById(R.id.ib_reset)
         tvStatus=findViewById(R.id.tv_status)
         bClick=findViewById(R.id.b_click)
+        llMode=findViewById(R.id.ll_Mode)
 
         bClick.setOnClickListener {
 
@@ -75,14 +78,16 @@ class Zikrlaractivity: AppCompatActivity(){
             count33=0
             count99=0
             mode=33
+            tvMode.text="33"
             tvStatus.text="0/33"
             bClick.text="0"
 
         }
 
-        bMode.setOnClickListener {
+        llMode.setOnClickListener {
 
             mode=99
+            tvMode.text="99"
             tvStatus.text="0/99"
             bClick.text="0"
 
