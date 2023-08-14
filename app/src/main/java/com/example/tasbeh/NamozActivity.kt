@@ -26,8 +26,21 @@ class NamozActivity: AppCompatActivity() {
             openTahoratActivity()
 
         }
+        bNamoz.setOnClickListener {
+
+            openNamozOqish()
+
+        }
 
     }
+
+    private fun openNamozOqish() {
+
+        val intent=Intent(this,NamozOqishActivity::class.java)
+        startActivity(intent)
+
+    }
+
     private fun openTahoratActivity(){
 
         val openTahorat= Intent(this,TahoratolishActivity::class.java)
