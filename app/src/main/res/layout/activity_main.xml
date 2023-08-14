@@ -9,13 +9,6 @@
     tools:context=".MainActivity"
     android:gravity="center"
     android:padding="10dp">
-    <ImageButton
-        android:id="@+id/b_main_settings"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/pic_settings"
-        android:layout_gravity="top|end"
-        android:background="@drawable/bg_click"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

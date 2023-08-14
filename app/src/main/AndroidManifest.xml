@@ -14,6 +14,7 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,17 +22,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ZikrlarActivity">
+        <activity android:name=".ZikrlarActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NamozActivity">
+        <activity android:name=".NamozActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".TahoratolishActivity">
+        <activity android:name=".TahoratolishActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NamozSoatlariActivity">
+        <activity android:name=".NamozSoatlariActivity"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NamozOqishActivity">
-        </activity>
-        <activity android:name=".SettingsActivity">
+        <activity android:name=".NamozOqishActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ZikrlarActivity: AppCompatActivity(){
-    lateinit var ibVolume:ImageButton
     lateinit var tvMode:TextView
     lateinit var ibReset:ImageButton
     lateinit var tvStatus:TextView
@@ -29,7 +28,6 @@ class ZikrlarActivity: AppCompatActivity(){
         var count99=0
         var mode=33
 
-        ibVolume=findViewById(R.id.ib_volume)
         tvMode=findViewById(R.id.tv_Mode)
         ibReset=findViewById(R.id.ib_reset)
         tvStatus=findViewById(R.id.tv_status)

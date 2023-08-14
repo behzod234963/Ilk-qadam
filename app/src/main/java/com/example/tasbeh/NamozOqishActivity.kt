@@ -27,13 +27,13 @@ class NamozOqishActivity: AppCompatActivity() {
         swrSwipeToRefresh.setOnRefreshListener {
 
             val text="Yangilandi"
-            webView.loadUrl("https://namoz.islom.uz/")
+            webView.loadUrl("https://namoz.islom.uz/namoz.html")
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
             swrSwipeToRefresh.isRefreshing=false
 
         }
 
-        webView.loadUrl("https://namoz.islom.uz/")
+        webView.loadUrl("https://namoz.islom.uz/namoz.html")
 
 
     }
