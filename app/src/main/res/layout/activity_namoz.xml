@@ -4,56 +4,30 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:paddingBottom="10dp"
-        android:background="@drawable/bg_pic_1"
-        android:gravity="center|bottom"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="10dp">
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center|bottom">
-            <Button
-                android:id="@+id/b_Tahorat_Namoz"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
-                app:backgroundTint="@null"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_b_main"
-                android:text="Tahorat olish"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:fontFamily="@font/main_buttons_script" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center|top"
-        android:background="@drawable/bg_pic_2"
-        android:paddingTop="10dp">
-        <Button
-            android:id="@+id/b_Namoz_Namoz"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            app:backgroundTint="@null"
-            android:textColor="@color/white"
-            android:background="@drawable/bg_b_main"
-            android:text="Namoz"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:fontFamily="@font/main_buttons_script" />
-    </LinearLayout>
+    android:gravity="center"
+    android:background="@drawable/bg_pic">
+    <Button
+        android:id="@+id/b_Tahorat_Namoz"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:backgroundTint="@null"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_b_main"
+        android:text="Tahorat olish"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/main_buttons_script" />
+    <Button
+        android:id="@+id/b_Namozoqish_Namoz"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        app:backgroundTint="@null"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_b_main"
+        android:text="Namoz o'qish odobi"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/main_buttons_script" />
 </LinearLayout>

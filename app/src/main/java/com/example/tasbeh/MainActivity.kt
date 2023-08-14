@@ -14,10 +14,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun navigation(){
+    private fun navigation(){
 
         val b_Zikrlar=findViewById<Button>(R.id.b_main_zikrlar)
         val bNamoz=findViewById<Button>(R.id.b_Namoz_Main)
+        val bNamozvaqtlari:Button=findViewById(R.id.b_namozSoatlari_Main)
 
         b_Zikrlar.setOnClickListener {
 
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         bNamoz.setOnClickListener {
 
             openNamoz()
+
+        }
+        bNamozvaqtlari.setOnClickListener {
+
+            openNamozVaqti()
 
         }
 
@@ -43,6 +49,13 @@ class MainActivity : AppCompatActivity() {
 
         val openNamoz=Intent(this,NamozActivity::class.java)
         startActivity(openNamoz)
+
+    }
+
+    fun openNamozVaqti(){
+
+        val openNamozVaqt=Intent(this,NamozSoatlariActivity::class.java)
+        startActivity(openNamozVaqt)
 
     }
 

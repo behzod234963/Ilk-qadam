@@ -19,7 +19,7 @@ class NamozActivity: AppCompatActivity() {
     private fun initViews() {
 
         val bTahorat=findViewById<Button>(R.id.b_Tahorat_Namoz)
-        val bNamoz=findViewById<Button>(R.id.b_Namoz_Namoz)
+        val bNamoz=findViewById<Button>(R.id.b_Namozoqish_Namoz)
 
         bTahorat.setOnClickListener {
 
