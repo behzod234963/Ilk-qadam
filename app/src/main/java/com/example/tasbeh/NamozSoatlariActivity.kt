@@ -26,8 +26,11 @@ class NamozSoatlariActivity: AppCompatActivity() {
 
         webView.webViewClient=object : WebViewClient(){
 
-            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-                view?.loadUrl("https://namozvaqtlari.com/uz/namoz-vaqtlari/17-hiva-bugungi-namoz-vatlari.html")
+            @Deprecated("Deprecated in Java")
+            override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
+                if (url != null) {
+                    view?.loadUrl(url)
+                }
                 return true
             }
 

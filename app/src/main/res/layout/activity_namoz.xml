@@ -6,28 +6,13 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/bg_pic">
-    <Button
-        android:id="@+id/b_Tahorat_Namoz"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        app:backgroundTint="@null"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_b_main"
-        android:text="Tahorat olish"
-        android:textSize="20sp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:fontFamily="@font/main_buttons_script" />
-    <Button
-        android:id="@+id/b_Namozoqish_Namoz"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        app:backgroundTint="@null"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_b_main"
-        android:text="Namoz o'qish odobi"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:fontFamily="@font/main_buttons_script" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swr_SwipeToRefrsh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/wv_TutoriaL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

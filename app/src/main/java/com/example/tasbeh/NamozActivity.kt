@@ -2,10 +2,14 @@ package com.example.tasbeh
 
 import android.content.Intent
 import android.os.Bundle
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class NamozActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,33 +22,25 @@ class NamozActivity: AppCompatActivity() {
 
     private fun initViews() {
 
-        val bTahorat=findViewById<Button>(R.id.b_Tahorat_Namoz)
-        val bNamoz=findViewById<Button>(R.id.b_Namozoqish_Namoz)
+        val wvTutorial:WebView=findViewById(R.id.wv_TutoriaL)
+        val swrSwipeRefresh:SwipeRefreshLayout=findViewById(R.id.swr_SwipeToRefrsh)
 
-        bTahorat.setOnClickListener {
+        wvTutorial.settings.javaScriptEnabled
 
-            openTahoratActivity()
+        wvTutorial.webViewClient=object :WebViewClient(){
+
+            @Deprecated("Deprecated in Java")
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+
+                if (url != null){
+
+                    view?.loadUrl(url)
+
+                }
+                return true
+            }
 
         }
-        bNamoz.setOnClickListener {
-
-            openNamozOqish()
-
-        }
-
-    }
-
-    private fun openNamozOqish() {
-
-        val intent=Intent(this,NamozOqishActivity::class.java)
-        startActivity(intent)
-
-    }
-
-    private fun openTahoratActivity(){
-
-        val openTahorat= Intent(this,TahoratolishActivity::class.java)
-        startActivity(openTahorat)
 
     }
 }
