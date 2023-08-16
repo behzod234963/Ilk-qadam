@@ -1,6 +1,7 @@
 package com.example.tasbeh
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
@@ -8,6 +9,7 @@ import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
@@ -41,6 +43,18 @@ class NamozActivity: AppCompatActivity() {
             }
 
         }
+
+        swrSwipeRefresh.setColorSchemeColors(Color.BLACK)
+        swrSwipeRefresh.setOnRefreshListener {
+
+            wvTutorial.loadUrl("https://namoz.islom.uz/")
+            val text="Yangilandi"
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+            swrSwipeRefresh.isRefreshing=false
+
+        }
+
+        wvTutorial.loadUrl("https://namoz.islom.uz/")
 
     }
 }
