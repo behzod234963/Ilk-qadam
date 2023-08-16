@@ -17,11 +17,6 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ZikrlarActivity"
             android:screenOrientation="portrait">
@@ -31,6 +26,15 @@
         </activity>
         <activity android:name=".NamozSoatlariActivity"
             android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
