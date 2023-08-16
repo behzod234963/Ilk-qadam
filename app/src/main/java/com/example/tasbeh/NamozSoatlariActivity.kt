@@ -40,14 +40,14 @@ class NamozSoatlariActivity: AppCompatActivity() {
         swrSwipeToRefresh.setColorSchemeColors(Color.BLACK)
         swrSwipeToRefresh.setOnRefreshListener {
 
-            webView.loadUrl("https://namozvaqtlari.com/uz/namoz-vaqtlari/17-hiva-bugungi-namoz-vatlari.html")
+            webView.loadUrl("https://islom.uz/vaqtlar/78/8")
             val text="Yangilandi"
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
             swrSwipeToRefresh.isRefreshing=false
 
         }
 
-        webView.loadUrl("https://namozvaqtlari.com/uz/namoz-vaqtlari/17-hiva-bugungi-namoz-vatlari.html")
+        webView.loadUrl("https://islom.uz/vaqtlar/78/8")
 
 
     }
